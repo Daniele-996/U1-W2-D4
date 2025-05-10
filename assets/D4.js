@@ -67,19 +67,29 @@ console.log(boundary(15));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function epify(stringa) {
-  if (stringa.startsWith(EPICODE, 0)) {
+  if (stringa.startsWith("EPICODE", 0)) {
     return stringa;
   } else {
     return "EPICODE" + stringa;
   }
 }
-console.log(epify(ciao));
+console.log(epify("ciao"));
+console.log(epify("EPICODEciao"));
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(num) {
+  if (num > 0 && (num % 3 === 0 || num % 7 === 0)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(check3and7(21));
+console.log(check3and7(9));
+console.log(check3and7(-1));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
